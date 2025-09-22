@@ -53,7 +53,7 @@ export const App: React.FC = () => {
       title,
       userId: userIdd,
       completed: false,
-      user: usersFromServer.find(user => user.id === userIdd) || null,
+      user: getUserById(userIdd) || null,
     };
 
     setTodos([...todos, newTodo]);
